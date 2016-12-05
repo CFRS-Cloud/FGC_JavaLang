@@ -1,12 +1,47 @@
 *.class
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+### Maven
+dependency-reduced-pom.xml
+.checkstyle
+pom.xml.releaseBackup
+release.properties
+*.versionsBackup
+
+### STS ###
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+/.apt_generated/
 
 # Package Files #
 *.jar
 *.war
 *.ear
 
+### JRebel ###
+rebel.xml
+
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+
+
+
