@@ -1,6 +1,8 @@
 *.class
 
 ### Maven
+.pmd
+.pmdruleset.xml
 dependency-reduced-pom.xml
 .checkstyle
 pom.xml.releaseBackup
