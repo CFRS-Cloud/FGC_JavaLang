@@ -13,19 +13,6 @@
     <packaging>jar</packaging>
     <name>Java 8+ common language code</name>
     
-    <distributionManagement>
-        <repository>
-            <id>cfrs-aws-release</id>
-            <name>CFRS AWS Release Repository</name>
-            <url>${cfrs-aws-release-repository-url}</url>
-        </repository>
-        <snapshotRepository>
-            <id>cfrs-aws-snapshot</id>
-            <name>CFRS AWS Snapshot Repository</name>
-            <url>${cfrs-aws-snapshot-repository-url}</url>
-        </snapshotRepository>
-    </distributionManagement>
-
     <licenses>
         <license>
             <name>BSD License Version 3</name>
