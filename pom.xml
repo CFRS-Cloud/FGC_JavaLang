@@ -9,9 +9,22 @@
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>common-lang</artifactId>
-    <version>1.1</version>
+    <version>1.2</version>
     <packaging>jar</packaging>
     <name>Java 8+ common language code</name>
+    
+    <distributionManagement>
+        <repository>
+            <id>cfrs-aws-release</id>
+            <name>CFRS AWS Release Repository</name>
+            <url>${cfrs-aws-release-repository-url}</url>
+        </repository>
+        <snapshotRepository>
+            <id>cfrs-aws-snapshot</id>
+            <name>CFRS AWS Snapshot Repository</name>
+            <url>${cfrs-aws-snapshot-repository-url}</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <licenses>
         <license>
