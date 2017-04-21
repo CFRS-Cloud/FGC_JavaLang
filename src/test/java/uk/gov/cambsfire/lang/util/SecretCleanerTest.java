@@ -41,24 +41,24 @@ public class SecretCleanerTest {
     @Test
     public void removeSecretsRemovesDataValuesLinkedToPasswords() {
         assertThat(SecretCleaner.removeSecrets("'abc': 123, 'password': bob"))
-                .isEqualTo("'abc': 123, 'password': '*****'");
+                .isEqualTo("'abc': 123, 'password': \"*****\"");
         assertThat(SecretCleaner.removeSecrets("{'abc': 123, 'password': 'bob'}"))
-                .isEqualTo("{'abc': 123, 'password': '*****'}");
+                .isEqualTo("{'abc': 123, 'password': \"*****\"}");
         assertThat(SecretCleaner.removeSecrets("{'abc': { 'password': 'bob' }}"))
-                .isEqualTo("{'abc': { 'password': '*****'}}");
+                .isEqualTo("{'abc': { 'password': \"*****\"}}");
         assertThat(SecretCleaner.removeSecrets("[abc: 123, password: dsgSERg345&%]"))
-                .isEqualTo("[abc: 123, password: '*****']");
+                .isEqualTo("[abc: 123, password: \"*****\"]");
         assertThat(SecretCleaner.removeSecrets("[abc: \"123\", password: \"dsgSERg345&%\"]"))
-                .isEqualTo("[abc: \"123\", password: '*****']");
+                .isEqualTo("[abc: \"123\", password: \"*****\"]");
 
     }
 
     @Test
     public void removeSecretsRemovesDataValuesLinkedToOtherPasswords() {
         assertThat(SecretCleaner.removeSecrets("'abc': 123, 'confirmPassword': 'bob'"))
-                .isEqualTo("'abc': 123, 'confirmPassword': '*****'");
+                .isEqualTo("'abc': 123, 'confirmPassword': \"*****\"");
         assertThat(SecretCleaner.removeSecrets("'abc': 123, 'passwordTemp': 'bob'"))
-                .isEqualTo("'abc': 123, 'passwordTemp': '*****'");
+                .isEqualTo("'abc': 123, 'passwordTemp': \"*****\"");
     }
 
 }

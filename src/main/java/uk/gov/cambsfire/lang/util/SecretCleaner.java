@@ -40,7 +40,7 @@ public final class SecretCleaner {
     private static final String SECRET_REGEX =
             "([\\\"']?\\w*?(\\w*password\\w*|\\w*secret\\w*)\\w*?[\\\"']?)"
                     + "(\\s*\\:?\\s*)?['\\\"]?.+?['\\\"]?(([,}\\]])|$)";
-    private static final String SECRET_REPLACEMENT_STRING = "$1$3'*****'$4";
+    private static final String SECRET_REPLACEMENT_STRING = "$1$3\"*****\"$4";
     private static final Pattern SECRET_PATTERN = Pattern.compile(SECRET_REGEX, Pattern.CASE_INSENSITIVE);
 
     private SecretCleaner() {
