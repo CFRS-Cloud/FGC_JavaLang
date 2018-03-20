@@ -1,3 +1,3 @@
 # common-lang
 
-Provides core Java 8+ functionality 
+Provides common Java 8+ functionality to CFRS projects. This library does not have any 3rd party dependencies.
