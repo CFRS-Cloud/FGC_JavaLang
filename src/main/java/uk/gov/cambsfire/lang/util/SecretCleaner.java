@@ -47,6 +47,11 @@ public final class SecretCleaner {
         // utils
     }
 
+    /**
+     * Remove potentially sensitive information from a string.
+     *
+     * Useful for logging output
+     */
     public static String removeSecrets(final String str) {
         return SECRET_PATTERN.matcher(str).replaceAll(SECRET_REPLACEMENT_STRING);
     }

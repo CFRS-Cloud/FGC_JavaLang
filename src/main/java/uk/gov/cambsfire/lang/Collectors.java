@@ -10,6 +10,9 @@ public final class Collectors {
 
     }
 
+    /**
+     * Collect to a LinkedHashMaps
+     */
     public static <T, K, U> Collector<T, ?, Map<K, U>> toOrderedMap(
             final Function<? super T, ? extends K> keyMapper,
             final Function<? super T, ? extends U> valueMapper) {

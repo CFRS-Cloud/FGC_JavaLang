@@ -32,7 +32,12 @@ package uk.gov.cambsfire.lang;
  * OF THE POSSIBILITY OF SUCH DAMAGE.
  * #L%
  */
-
+/**
+ * Error occurring in remotely called services
+ * 
+ * @author david.bower
+ *
+ */
 public class RemoteServiceException extends ServiceException {
 
     private static final long serialVersionUID = 1L;

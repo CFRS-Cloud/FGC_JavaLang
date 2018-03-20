@@ -33,6 +33,12 @@ package uk.gov.cambsfire.lang;
  * #L%
  */
 
+/**
+ * Wrap a checked exception inside a RuntimeException
+ * 
+ * @author david.bower
+ *
+ */
 public class WrappedException extends RuntimeException {
 
     private static final long serialVersionUID = 1L;
